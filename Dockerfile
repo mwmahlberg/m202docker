@@ -1,3 +1,6 @@
+# m202docker
+#
+# VERSION	v0.1
 FROM ubuntu:14.04
 MAINTAINER Markus W Mahlberg "markus.mahlberg@me.com"
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \ 
