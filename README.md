@@ -4,8 +4,9 @@
 It is equally useful for the equally excellent class "[M102: MongoDB for DBAs][m102]".
 
 The image holds the current MongoDB release plus the super useful [mtools][mtools] by Thomas Rückstieß.
+Additionally, the [mongo-edu][medu] video download helper script by Przemyslaw Pluta was integrated.
 
-I created this docker image after I notices that some people have problems running the software required in the various classes of the MongoDB university.
+I created this docker image after I noticed that some people have problems running the software required in the various classes of the MongoDB university.
 
 ##Installation
 ###Linux
@@ -95,6 +96,7 @@ After issuing this command you will get a new prompt and you are inside the cont
 [university]: https://university.mongodb.com "Homepage of the MongoDB University"
 [m202]: https://university.mongodb.com/courses/10gen/M202/2014_September/about "\"About M202\" on university.mongodb.com"
 [m102]: https://university.mongodb.com/courses/10gen/M102/2014_September/about "\"About M102\" on university.mongodb.com"
+[medu]: https://github.com/przemyslawpluta/mongo-edu "Project page of mongo-edu on github.com"
 [boot2docker]: http://boot2docker.io "Homepage of Boot2Docker"
 [dockerLinux]: http://docs.docker.com/installation/ "Docker installation instrcutions overview"
 [dockerOSX]: http://docs.docker.com/installation/mac/ "Docker installation instructions for OSX"
