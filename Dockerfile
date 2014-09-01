@@ -9,3 +9,5 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install python-dev python-pymongo python-pip mongodb-org python-numpy && apt-get clean
 RUN install -d -m 0777 /data/db
 RUN pip install mtools
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install npm && apt-get clean
+RUN ln -s /usr/bin/nodejs /usr/bin/node && npm install mongo-edu -g
