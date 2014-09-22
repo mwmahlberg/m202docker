@@ -11,3 +11,5 @@ RUN install -d -m 0777 /data/db
 RUN pip install mtools
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install npm && apt-get clean
 RUN ln -s /usr/bin/nodejs /usr/bin/node && npm install mongo-edu -g
+EXPOSE 27017 27018 27019
+VOLUME /mnt
