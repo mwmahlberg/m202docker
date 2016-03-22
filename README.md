@@ -69,7 +69,7 @@ We use Windows sharing because it is supported by both Windows and OSX.
 
 Please follow the instructions shown after the image is started to connect to the volume.
 
-**Note: You need to start this container every time you (re)start boot2docker**
+**Note: You need to start this container every time you (re)start the docker-machine VM**
 
 ### Running the image
 
