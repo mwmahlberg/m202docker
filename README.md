@@ -1,4 +1,4 @@
-#M202 docker image
+# M202 docker image
 "mwmahlberg/m202" is a [Docker image][docker] for [MongoDB University][university]'s excellent class "[M202: MongoDB Advanced Deployment and Operations][m202]".
 
 It is equally useful for the equally excellent class "[M102: MongoDB for DBAs][m102]".
@@ -8,8 +8,8 @@ Additionally, the [mongo-edu][medu] video download helper script by Przemyslaw P
 
 I created this docker image after I noticed that some people have problems running the software required in the various classes of the MongoDB university.
 
-##Installation
-###Linux
+## Installation
+### Linux
 
 All you need is a current Linux distribution which offers Docker as a package.
 
@@ -17,36 +17,36 @@ There are installation [instructions available for a variety of Linux flavors][d
 
 Please follow the installation instructions for your respective Linux distribution.
 
-###OSX
+### OSX
 
 Docker requires Linux. In order to use Docker on OSX, we need to install a virtual machine which runs Linux and provides the Docker software.
 
-Thanks to the [Boot2Docker][boot2docker] project, doing this is as easy as installing a normal software package on OSX.
- 
+Thanks to the [Docker Machine][docker-machine], doing this is as easy as installing a normal software package on OSX.
+
 Please follow the [Docker installation instructions for OSX][dockerOSX].
 
-###Windows
+### Windows
 
 For Windows, the same as for OSX applies.
 
 Please follow the [Docker installation instructions for Windows][dockerWin].
 
-##Installation of "mwmahlberg/m202docker"
+## Installation of "mwmahlberg/m202docker"
 Once you have docker running, the installation of the image is actually pretty easy.
 
-###Making data available to the image.
+### Making data available to the image.
 #### Linux
 In order to make data available to the image, you have to mount a host volume to the docker image. you do this by issuing
 
-    docker run -i -t -v <HOSTDIRECTORY>:/mnt mwmahlberg/m202docker
+    docker run -i -t -v <HOSTDIRECTORY>:/mnt mwmahlberg/m202docker:3.0
 
 This would make all files and directories in `<HOSTDIRECTORY>` available to the directory `/mnt` in the running image.
-    
+
 I would suggest to create a folder in your home directory for all the data of the MongoDB classes and use this as `<HOSTDIRECTORY>`. For example
-    
+
     mkdir ~/m202
-    docker run -i -t -v ~/m202:/mnt mwmahlberg/m202docker
-    
+    docker run -i -t -v ~/m202:/mnt mwmahlberg/m202docker:3.0
+
 #### OSX & Windows
 Making data available to the image is slightly more complicated under OSX than it is under Linux. The good news is that once you have set it up it is easy to use.
 
@@ -71,11 +71,11 @@ Please follow the instructions shown after the image is started to connect to th
 
 **Note: You need to start this container every time you (re)start boot2docker**
 
-###Running the image
+### Running the image
 
 Once you have set up everything, running the image is as easy as
 
-    docker run -it --volumes-from m202data mwmahlberg/m202docker:latest
+    docker run -it --volumes-from m202data mwmahlberg/m202docker:3.0
 
 After issuing this command you will get a new prompt and you are inside the container!
 
@@ -97,10 +97,10 @@ After issuing this command you will get a new prompt and you are inside the cont
 [m202]: https://university.mongodb.com/courses/10gen/M202/2014_September/about "\"About M202\" on university.mongodb.com"
 [m102]: https://university.mongodb.com/courses/10gen/M102/2014_September/about "\"About M102\" on university.mongodb.com"
 [medu]: https://github.com/przemyslawpluta/mongo-edu "Project page of mongo-edu on github.com"
-[boot2docker]: http://boot2docker.io "Homepage of Boot2Docker"
-[dockerLinux]: http://docs.docker.com/installation/ "Docker installation instrcutions overview"
-[dockerOSX]: http://docs.docker.com/installation/mac/ "Docker installation instructions for OSX"
-[dockerWin]: http://docs.docker.com/installation/windows/ "Docker installation intrcutions for Windows"
+[docker-machine]: https://docs.docker.com/machine/ "Homepage of Docker Machine"
+[dockerLinux]: https://docs.docker.com/engine/installation/linux/ "Docker installation instructions overview"
+[dockerOSX]: https://docs.docker.com/engine/installation/mac/ "Docker installation instructions for OSX"
+[dockerWin]: https://docs.docker.com/engine/installation/windows/ "Docker installation instructions for Windows"
 [ppdocker]: https://registry.hub.docker.com/u/mwmahlberg/m202docker/
 [ppgithub]: https://github.com/mwmahlberg/m202docker
 [issuetracker]: https://github.com/mwmahlberg/m202docker/issues?q=is%3Aopen+is%3Aissue
